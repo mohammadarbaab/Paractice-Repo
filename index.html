@@ -25,9 +25,24 @@
     //SECOND INTERVIEW QSN
     //Find max occuring char
 
-    const str="hello";
-    for(let i=0;i<str.length;i++){
-        console.log(str[i]);
-    }
+    // const str="hello";
+    // for(let i=0;i<str.length;i++){
+    //     console.log(str[i]);
+    // }
+
+    //BOOK AIRLINE TICKET IN ARRAY INSIDE OBJECT
+    let mainPlane = {
+      airline: "fly India",
+      iataCode: "Fi",
+      bookings: [],
+      book: function (flightNum, name) {
+        console.log(
+          `${name} booked fligt on ${this.airline} with the no ${this.iataCode}`
+        );
+        this.bookings.push({ flightName: `${this.airline}`, name: name });
+      },
+    };
+    mainPlane.book(555, "harry");
+    console.log(mainPlane);
   </script>
 </html>
